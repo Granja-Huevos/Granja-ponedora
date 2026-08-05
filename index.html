@@ -63,7 +63,16 @@
 <div class="modal" id="modal"><div class="modal-box"><div class="modal-head"><h3 id="modalTitle"></h3><button class="close" onclick="closeModal()">✕</button></div><div id="modalContent"></div></div></div>
 <script>
 const KEYS={data:'granjaPonedoraDataV1'};
-const firebaseConfig={apiKey:'AIzaSyAwo4Aub2M8X2C1iFv0BWHnA10P4GqJWxM',authDomain:'graja-ponedora.firebaseapp.com',projectId:'graja-ponedora',storageBucket:'graja-ponedora.firebasestorage.app',messagingSenderId:'321879931446',appId:'1:321879931446:web:176479480a7d674151f697',measurementId:'G-5381X64644'};
+const firebaseConfig = {
+  apiKey: "AIzaSyAwo4Aub2M8X2C1iFv0BWHnA10P4GqJWxM",
+  authDomain: "graja-ponedora.firebaseapp.com",
+  projectId: "graja-ponedora",
+  storageBucket: "graja-ponedora.firebasestorage.app",
+  messagingSenderId: "321879931446",
+  appId: "1:321879931446:web:176479480a7d674151f697",
+  measurementId: "G-5381X64644"
+};
+
 firebase.initializeApp(firebaseConfig);
 const auth=firebase.auth(), cloud=firebase.firestore(), cloudRef=cloud.collection('shared').doc('granja');
 let cloudReady=false, applyingCloud=false, unsubscribeCloud=null;
